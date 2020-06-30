@@ -22,9 +22,9 @@ w, h = font.getsize(randQuote)
 x = (inky_display.WIDTH / 2) - (w / 2)
 y = (inky_display.HEIGHT / 2) - (h / 2)
 
-#pascal = Image.open("pascal.png")
-#inky_display.set_image(pascal)
+pascal = Image.open("pascal.png")
+inky_display.set_image(pascal)
 
-draw.text((x, y), randQuote, inky_display.BLACK, font)
-inky_display.set_image(img)
+#draw.text((x, y), randQuote, inky_display.BLACK, font)
+#inky_display.set_image(img)
 inky_display.show()
