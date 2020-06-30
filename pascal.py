@@ -1,6 +1,7 @@
 from inky import InkyPHAT
 from random import randint
 from PIL import Image, ImageFont, ImageDraw
+import textwrap
 
 inky_display = InkyPHAT("red")
 inky_display.set_border(inky_display.WHITE)
@@ -17,14 +18,15 @@ quotes.close()
 lengthQuotes = len(lines)
 randNo = (randint(1, lengthQuotes - 1))
 randQuote = str(lines[randNo])
+wrappedQuote = textwrap.wrap(randQuote, width=13)
+joinedText = "\n".join(wrappedQuote)
 
-w, h = font.getsize(randQuote)
-x = (inky_display.WIDTH / 2) - (w / 2)
-y = (inky_display.HEIGHT / 2) - (h / 2)
+x = 70
+y = 5
 
 pascal = Image.open("pascal.png")
 inky_display.set_image(pascal)
 
-#draw.text((x, y), randQuote, inky_display.BLACK, font)
-#inky_display.set_image(img)
+draw.text((x, y), joinedText, inky_display.BLACK, font)
+inky_display.set_image(img)
 inky_display.show()
