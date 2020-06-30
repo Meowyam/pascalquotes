@@ -8,8 +8,8 @@ inky_display.set_border(inky_display.WHITE)
 img = Image.new("P", (inky_display.WIDTH, inky_display.HEIGHT))
 draw = ImageDraw.Draw(img)
 
-from font_amatic_sc import AmaticSC
-font = ImageFont.truetype(AmaticSC, 16)
+from font_fredoka_one import FredokaOne
+font = ImageFont.truetype(FredokaOne, 16)
 
 quotes = open("allQuotes.txt", "r")
 lines = quotes.readlines()
