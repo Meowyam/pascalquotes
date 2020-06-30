@@ -22,7 +22,16 @@ w, h = font.getsize(randQuote)
 x = (inky_display.WIDTH / 2) - (w / 2)
 y = (inky_display.HEIGHT / 2) - (h / 2)
 
+palette = Image.new('P', (1, 1))
+palette.putpalette(
+[
+    255, 255, 255,   # 0 = White
+    0, 0, 0,         # 1 = Black
+    255, 0, 0,       # 2 = Red (255, 255, 0 for yellow)
+] + [0, 0, 0] * 253  # Zero fill the rest of the 256 colour palette
+
 pascal = Image.open("pascal.png")
+pascalQuant = pascalQuant.quantize(colors=3, palette=palette)
 inky_display.set_image(pascal)
 
 draw.text((x, y), randQuote, inky_display.BLACK, font)
