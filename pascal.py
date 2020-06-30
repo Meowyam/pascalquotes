@@ -17,7 +17,7 @@ quotes.close()
 lengthQuotes = len(lines)
 randQuote = (randint(1, lengthQuotes - 1))
 
-w, h = font.getsize(message)
+w, h = font.getsize(randQuote)
 x = (inky_display.WIDTH / 2) - (w / 2)
 y = (inky_display.HEIGHT / 2) - (h / 2)
 
