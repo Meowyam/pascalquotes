@@ -1,8 +1,8 @@
-from inky import inkyPHAT
+from inky import InkyPHAT
 from random import randint
 from PIL import Image, ImageFont, ImageDraw
 
-inky_display = inkyPHAT("red")
+inky_display = InkyPHAT("red")
 inky_display.set_border(inky_display.WHITE)
 
 img = Image.new("P", (inky_display.WIDTH, inky_display.HEIGHT))
