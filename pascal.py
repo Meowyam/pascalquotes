@@ -9,8 +9,7 @@ inky_display.set_border(inky_display.WHITE)
 img = Image.new("P", (inky_display.WIDTH, inky_display.HEIGHT))
 draw = ImageDraw.Draw(img)
 
-from font_fredoka_one import FredokaOne
-font = ImageFont.truetype(FredokaOne, 16)
+font = ImageFont.truetype(inkyphat.fonts.AmaticSC, 12)
 
 quotes = open("allQuotes.txt", "r")
 lines = quotes.readlines()
@@ -18,7 +17,7 @@ quotes.close()
 lengthQuotes = len(lines)
 randNo = (randint(1, lengthQuotes - 1))
 randQuote = str(lines[randNo])
-wrappedQuote = textwrap.wrap(randQuote, width=13)
+wrappedQuote = textwrap.wrap(randQuote, width=18)
 joinedText = "\n".join(wrappedQuote)
 
 x = 70
@@ -27,6 +26,5 @@ y = 5
 pascal = Image.open("pascal.png")
 inky_display.set_image(pascal)
 
-draw.text((x, y), joinedText, inky_display.BLACK, font)
-inky_display.set_image(img)
+inky_display.text((x, y), joinedText, inky_display.BLACK, font)
 inky_display.show()
