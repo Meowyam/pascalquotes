@@ -9,7 +9,8 @@ inky_display.set_border(inky_display.WHITE)
 img = Image.new("P", (inky_display.WIDTH, inky_display.HEIGHT))
 draw = ImageDraw.Draw(img)
 
-font = ImageFont.truetype(InkyPHAT.fonts.AmaticSC, 12)
+from font_amatic_sc import AmaticSC
+font = ImageFont.truetype(AmaticSC, 12)
 
 quotes = open("allQuotes.txt", "r")
 lines = quotes.readlines()
