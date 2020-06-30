@@ -11,7 +11,7 @@ inky_display.set_border(inky_display.WHITE)
 img = Image.open("pascal.png")
 draw = ImageDraw.Draw(img)
 
-font = ImageFont.truetype("roboto.ttf", 12)
+font = ImageFont.truetype("roboto.ttf", 14)
 
 quotes = open("allQuotes.txt", "r")
 lines = quotes.readlines()
