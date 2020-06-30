@@ -37,7 +37,7 @@ palette.putpalette([
                    )
 
 pascal = Image.open("pascal.png")
-pascalQuant = pascalQuant.quantize(colors=3, palette=palette)
+pascal = pascal.quantize(colors=3, palette=palette)
 inky_display.set_image(pascal)
 
 draw.text((x, y), randQuote, inky_display.BLACK, font)
