@@ -10,8 +10,8 @@ tweetList = got.manager.TweetManager.getTweets(tweetCriteria)
 
 quoteFile = open("allQuotes.txt", "a")
 
-wrong_punc = ['’', '‘', '…']
-fixed_punc = ['\'', '\'', '...']
+wrong_punc = ['’', '‘', '…', '—']
+fixed_punc = ['\'', '\'', '...', '-']
 
 n = len(tweetList)
 for n in tweetList:
