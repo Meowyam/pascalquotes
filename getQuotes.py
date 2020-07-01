@@ -1,3 +1,5 @@
+# coding: utf-8
+
 import GetOldTweets3 as got
 
 tweetCriteria = got.manager.TweetCriteria().setUsername("PascalCrossing")\

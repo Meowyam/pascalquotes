@@ -19,7 +19,7 @@ quotes.close()
 lengthQuotes = len(lines)
 randNo = (randint(1, lengthQuotes - 1))
 randQuote = str(lines[randNo])
-wrappedQuote = textwrap.wrap(randQuote, width=25)
+wrappedQuote = textwrap.wrap(randQuote, width=23)
 joinedText = "\n".join(wrappedQuote)
 
 x = 65
