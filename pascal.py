@@ -1,19 +1,21 @@
-#!/usr/bin/env/python
-
+#!/usr/bin/env python
 from inky import InkyPHAT
 from random import randint
 from PIL import Image, ImageFont, ImageDraw
 import textwrap
 
+import os
+DIR_PATH = os.path.dirname(__file__)
+
 inky_display = InkyPHAT("red")
 inky_display.set_border(inky_display.WHITE)
 
-img = Image.open("pascal.png")
+img = Image.open(DIR_PATH + "/pascal.png")
 draw = ImageDraw.Draw(img)
 
-font = ImageFont.truetype("roboto.ttf", 14)
+font = ImageFont.truetype(DIR_PATH + "/roboto.ttf", 14)
 
-quotes = open("allQuotes.txt", "r")
+quotes = open(DIR_PATH + "/allQuotes.txt", "r")
 lines = quotes.readlines()
 quotes.close()
 lengthQuotes = len(lines)
